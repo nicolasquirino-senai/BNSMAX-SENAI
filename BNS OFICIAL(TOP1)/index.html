@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hbo Max</title>
+    <link rel="icon" href="IMG/BNSmaxSEMFUNDO.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="bns.css">
+
+<style>
+        /* Resetando estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #1e1e1e;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: #111;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 32px;
+            font-weight: bold;
+            color: #AD49E1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #111;
+        }
+
+        /* Estilo para o item selecionado */
+        nav a.active {
+            background-color: #AD49E1;
+            color: white;
+        }
+
+        footer {
+            background: #000;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer; /* deixa com cara de link mesmo sem href */
+        }
+
+/* Efeito hover estilo HBO Max */
+        .footer-links a:hover {
+            color: #a56eff; /* roxo característico HBO Max */
+            transform: scale(1.05); /* leve aumento ao passar o mouse */
+        }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/BNSmaxSEMFUNDO.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="cadastro.html">Assine</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<script>
+        // Pega todos os links do menu
+        const menuLinks = document.querySelectorAll('nav a');
+
+        // Adiciona evento de clique em cada link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove a classe "active" de todos
+                menuLinks.forEach(item => item.classList.remove('active'));
+
+                // Adiciona a classe "active" no link clicado
+                link.classList.add('active');
+            });
+        });
+    </script>
+
+
+
+
+
+    <div class="container">
+        <div class="logo">
+            <img src="IMG/BNSmaxSEMFUNDO.png" alt="BNS Max Logo">
+        </div>
+    </div>
+
+    <h1>Planos Disponíveis</h1>
+
+    <div class="planos">
+        <div class="plano-cartao">
+            <h3>Plano Mensal</h3>
+            <p class="price">R$24,99</p>
+            <ul>
+                <li> ✓ Acesso a todo o catálogo</li>
+                <li> ✓ 1 Tela simultânea</li>
+                <li> ✓ Qualidade HD</li>
+                <li> ✓ Baixe para assitir offline</li>
+            </ul>
+            <form action="cadastro.html" method="get">
+            <button type="submit">Assinar</button>
+            </form>
+        </div>
+
+        <div class="plano-cartao">
+            <h3>Plano Anual</h3>
+            <p class="price">R$249,99</p>
+            <ul>
+                <li> ✓ Acesso a todo o catálogo</li>
+                <li> ✓ 1 Tela simultânea</li>
+                <li> ✓ Qualidade HD</li>
+                <li> ✓ Baixe para assitir offline</li>
+                <li> ✓ Desconto de 17%</li>
+            </ul>
+            <form action="cadastro.html" method="get">
+               <button type="submit">Assinar</button>
+            </form>
+        </div>
+    </div>
+
+    <h1>Confira Alguns de Nossos filmes:</h1>
+
+    <div class="carrossel">
+        <!-- Botoes para mudar o carrosel-->
+         <input type="radio" name="slide" id="s1" checked> <!--type é a bolinha que a gente seleciona-->
+         <input type="radio" name="slide" id="s2">
+         <input type="radio" name="slide" id="s3">
+         <input type="radio" name="slide" id="s4">
+         <input type="radio" name="slide" id="s5">
+
+        <!--Slides-->
+    <div class="slides">
+        <div class="slide">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/7bac8684a6962bb7b21c921adc42ab2f3717df7d8f62ce7ea01f3bc5ef6f5666.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="https://i.ytimg.com/vi/C8GJpraxwUc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAaw6B733AkP5W7tmhF444cV14njg" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="https://img.englishcinemaparis.com/nKizXKvqQfZzAMBylGXBi7TuU37mFVp7Mb9phhtftSw/resize:fill:800:450:1:0/gravity:sm/aHR0cHM6Ly9leHBhdGNpbmVtYXByb2QuYmxvYi5jb3JlLndpbmRvd3MubmV0L2ltYWdlcy82MGMzNzFhMy0yNzQyLTQwZWYtYTQwOS1kMzE0NmI0YTNlNDQuanBn.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="https://protocolosmarvel.wordpress.com/wp-content/uploads/2024/10/venom-3-poster-banner.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="https://colectivodistopias.wordpress.com/wp-content/uploads/2017/02/lego_batman_movie_banner.png" alt="Imagem 1">
+        </div>
+    </div>
+
+    <!--Navegação-->
+    <div class="navegacao">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+        <label for="s4"></label>
+        <label for="s5"></label>
+    </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-links">
+            <div>
+                <a>AGORA NA HBO MAX</a>
+                <a>FILMES</a>
+                <a>SÉRIES DE TV</a>
+                <a>EPISÓDIOS GRÁTIS</a>
+            </div>
+            <div>
+                <a>FUTEBOL</a>
+                <a>CRIANÇAS E FAMÍLIA</a>
+                <a>FILMES E SÉRIES PREMIADOS</a>
+                <a>AJUDA</a>
+            </div>
+            <div>
+                <a>Acessibilidade</a>
+                <a>Política de Privacidade</a>
+                <a>Modo Infantil</a>
+                <a>Termos de Uso</a>
+            </div>
+            <div>
+                <a>Não Vender Ou Compartilhar Minhas Informações</a>
+                <a>Comunicados Para A Imprensa</a>
+            </div>
+        </div>
+    <div class="footer-bottom">
+            2025 WarnerMedia Direct Latin America, LLC. Todos os direitos reservados.
+            BNS Max é usado sob licença.
+    </div>
+    </footer>
+    
+</body>
+</html>

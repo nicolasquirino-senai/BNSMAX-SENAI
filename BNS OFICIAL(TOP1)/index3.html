@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aba de Filmes</title>
+    <link rel="icon" href="IMG/BNSmax.png" icon="image/x-icon">
+    <link rel="stylesheet" href="catalogo.css">
+    <header>
+    <div class="logo">
+      <img src="IMG/BNSmaxSEMFUNDO.png" alt="Logo BNS Max">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="contas.html" class="active">Trocar Conta</a></li>
+                <li><a href="series.html">Séries</a></li>
+                <li><a href="catlogo-BNS.html">Filmes</a></li>
+      </ul>
+    </nav>
+
+    <!-- PERFIL SIMULADO (usuário logado) -->
+    <div class="perfil">
+      <img src="IMG/cont1.png" alt="Foto de Perfil">
+      <span>Perfil</span>
+    </div>
+  </header>
+
+    <script>
+        // Pega todos os links do menu
+        const menuLinks = document.querySelectorAll('nav a');
+
+        // Adiciona evento de clique em cada link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove a classe "active" de todos
+                menuLinks.forEach(item => item.classList.remove('active'));
+
+                // Adiciona a classe "active" no link clicado
+                link.classList.add('active');
+            });
+        });
+    </script>
+    <style>
+        /* Resetando estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #1e1e1e;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #111;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 32px;
+            font-weight: bold;
+            color: #AD49E1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #111;
+        }
+
+        /* Estilo para o item selecionado */
+        nav a.active {
+            background-color: #AD49E1;
+            color: white;
+        }
+
+        
+    </style>
+
+<body>
+
+<center>
+    <div class="filmes">
+        <table>
+        <div class="caixa">
+            <h1>Filmes</h1>
+        </div>
+            <div class="titulos"><h1>Ação</h1></div>
+            <tr>
+                <th>Infiltrado</th>
+                <th>Velozes Furiosos</th>
+                <th>Homem Aranha</th>
+                <th>Missão Impossivel</th>
+                <th>Matrix</th>
+                <th>Vingadores Ultimato</th>
+                <th>The Batman</th>
+
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#infiltrado"><img src="IMG/acao1.jpg" alt="Infiltrado" class="zoom-img" width="250px" height="375px"></a></div></td>
+                <td><div class="imagens"><a href="#velozes"><img src="IMG/acao2.jpg" alt="Velozes e Furiosos" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#homemaranha"><img src="IMG/acao3.jpg" alt="Homem Aranha" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#missao"><img src="IMG/acao4.jpg" alt="Missão Impossivel" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#matrix"><img src="IMG/acao5.jpg" alt="Matrix" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#vingadores"><img src="IMG/acao6.jpg" alt="Vingadores" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#batman"><img src="IMG/acao7.jpg" alt="Batman" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+            </div>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Comédia</h1></div>
+            <tr>
+                <th>Ta Rindo do Quê?</th>
+                <th>Os Farofeiros</th>
+                <th>Férias Trocadas</th>
+                <th>Minha Mãe é uma Peça</th>
+                <th>Esposa de Mentirinha</th>
+                <th>Este é o meu Garoto</th>
+                <th>O Paizão</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#tarindodoque"><img src="IMG/comedia1.jpg" alt="Ta Rindo do que" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#farofeiros"><img src="IMG/comedia2.jpg" alt="Os Farofeiros" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#ferias"><img src="IMG/comedia3.jpg" alt="Férias trocadas" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#minhamae"><img src="IMG/comedia4.jpg" alt="Minha Mãe é uma peça" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#esposa"><img src="IMG/comedia5.jpg" alt="Esposa de Mentirinha" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#meugaroto"><img src="IMG/comedia6.jpg" alt="Este é o meu Garoto" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#paizao"><img src="IMG/comedia7.jpg" alt="O Paizão" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Animações</h1></div>
+            <tr>
+                <th>Carros</th>
+                <th>Toy Story</th>
+                <th>Ratatouille</th>
+                <th>Hotel Transylvania 3</th>
+                <th>Homem Aranha</th>
+                <th>Viva</th>
+                <th>UP</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#carros"><img src="IMG/infatntil1.jpg" alt="Carros" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="toystory"><img src="IMG/infantil2.jpg" alt="Toy-Story" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#rato"><img src="IMG/infantil3.jpg" alt="Ratatouille" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#hotel"><img src="IMG/infantil4.jpg" alt="Hotel Transylvania" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#aranhaverso"><img src="IMG/infantil5.jpg" alt="Homem Aranha no Aranhaverso" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#viva"><img src="IMG/infantil6.jpg" alt="Viva" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#up"><img src="IMG/infantil7.jpg" alt="UP" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Terror</h1></div>
+            <tr>
+                <th>Invocação do Mal</th>
+                <th>A Médium</th>
+                <th>US</th>
+                <th>Annabelle 2</th>
+                <th>IT a Coisa</th>
+                <th>A Entidade</th>
+                <th>Rogai por nós</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#invocacao"><img src="IMG/terror1.jpg" alt="Invocação do mal" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#medium"><img src="IMG/terror2.jpg" alt="A Médium" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#us"><img src="IMG/terror3.jpg" alt="US" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#annabelle"><img src="IMG/terror4.jpg" alt="Annabelle 2" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#it"><img src="IMG/terror5.jpg" alt="IT a Coisa" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#entidade"><img src="IMG/terror6.jpg" alt="A Entidade" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#rogai"><img src="IMG/terror7.jpg" alt="Rogai por nós" class="zoom-img" width="250px" height="375px"></a></td>
+            <tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Romance</h1></div>
+            <tr>
+                <th>Diário De uma Paixão</th>
+                <th>Amor de Redenção</th>
+                <th>Uma Ideia de Você</th>
+                <th>Sua Culpa</th>
+                <th>A Cinco Passos de Você</th>
+                <th>Como eu era antes de você</th>
+                <th>Amor de Aluguel</th>
+            </tr>
+        
+            <tr>
+                <td><div class="imagens"><a href="#diario"><img src="IMG/romance1.jpg" alt="Diário de uma paixão" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#amor"><img src="IMG/romance2.jpg" alt="Amor de Redenção" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#ideia"><img src="IMG/romance3.jpg" alt="Uma Ideia de Você" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#suaculpa"><img src="IMG/romance4.jpg" alt="Sua Culpa" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#passos"><img src="IMG/romance5.jpg" alt="A cinco passos de Você" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#antes"><img src="IMG/romance6.jpg" alt="Como eu era antes de você" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#aluguel"><img src="IMG/romance7.jpg" alt="Amor de Aluguel" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="infiltrado" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao1.jpg" alt="Pôster de Infiltrado">
+            <div>
+                <h2>Infiltrado</h2>
+                <p><strong>Duração:</strong> 1h 59min</p>
+                <p><strong>Avaliação:</strong> 7.1/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um personagem misteriosamente estoico é contratado como segurança por uma empresa de caminhões de dinheiro responsável por transportar muito dinheiro por Los Angeles toda semana..</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="velozes" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao2.jpg" alt="Pôster de Velozes e Furiosos">
+            <div>
+                <h2>Velozes & Furiosos: Desafio em Tóquio</h2>
+                <p><strong>Duração:</strong> 1h 44min</p>
+                <p><strong>Avaliação:</strong> 6.1/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um adolescente mora com seu pai em Tóquio para evitar uma sentença de prisão na América. Ele se torna um grande competidor no mundo das corridas de drift.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+    
+    <div id="homemaranha" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao3.jpg" alt="Pôster de Homem-Aranha">
+            <div>
+                <h2>Homem-Aranha: Sem Volta para Casa</h2>
+                <p><strong>Duração:</strong> 2h 28min</p>
+                <p><strong>Avaliação:</strong> 8.2/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Com a identidade do Homem-Aranha revelada, Peter pede ajuda ao Doutor Estranho. Quando um feitiço dá errado, inimigos perigosos de outros mundos começam a aparecer.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="missao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao4.jpg" alt="Pôster de Missão Impossível">
+            <div>
+                <h2>Missão: Impossível - Acerto de Contas Parte Um</h2>
+                <p><strong>Duração:</strong> 2h 43min</p>
+                <p><strong>Avaliação:</strong> 7.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Ethan Hunt e seu grupo do IMF embarcam na missão mais arriscada até agora: localizar uma nova arma aterrorizante que ameaça toda a humanidade antes que caia nas mãos erradas.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="matrix" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao5.jpg" alt="Pôster de Matrix">
+            <div>
+                <h2>Matrix</h2>
+                <p><strong>Duração:</strong> 2h 16min</p>
+                <p><strong>Avaliação:</strong> 8.7/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um hacker aprende com os misteriosos rebeldes sobre a verdadeira natureza de sua realidade e seu papel na guerra contra seus controladores.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="vingadores" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao6.jpg" alt="Pôster de Vingadores">
+            <div>
+                <h2>Vingadores: Ultimato</h2>
+                <p><strong>Duração:</strong> 3h 01min</p>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Após os eventos devastadores de Vingadores: Guerra Infinita (2018) , o universo está em ruínas. Com a ajuda dos aliados restantes, os Vingadores se reúnem novamente para reverter as ações de Thanos e restaurar o equilíbrio do universo.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="batman" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/acao7.jpg" alt="Pôster de Batman">
+            <div>
+                <h2>The Batman</h2>
+                <p><strong>Duração:</strong> 2h 56min</p>
+                <p><strong>Avaliação:</strong> 7.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Quando um assassino em série sádico começa a assassinar figuras políticas importantes em Gotham, o Batman é forçado a investigar a corrupção oculta da cidade e questionar o envolvimento de sua família.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="tarindodoque" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia1.jpg" alt="Pôster de Tá Rindo do Que">
+            <div>
+                <h2>Tá Rindo do Que?</h2>
+                <p><strong>Duração:</strong> 2h 26min</p>
+                <p><strong>Avaliação:</strong> 6.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Quando o experiente comediante George Simmons descobre sua condição terminal, seu desejo de formar uma amizade genuína o leva a tomar um ator baixo sua asa.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+    
+
+    <div id="farofeiros" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia2.jpg" alt="Pôster de Farofeiros">
+            <div>
+                <h2>Os Farofeiros</h2>
+                <p><strong>Duração:</strong> 1h 43min</p>
+                <p><strong>Avaliação:</strong> 6.0/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> As coisas se voltam caóticas quando quatro colegas decidem curtir das ferias numa casa na praia com suas familias.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="ferias" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia3.jpg" alt="Pôster de Ferias Trocadas">
+            <div>
+                <h2>Férias Trocadas</h2>
+                <p><strong>Duração:</strong> 1h 37min</p>
+                <p><strong>Avaliação:</strong> 5.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> José Eduardo é dono de uma escolinha de futebol e ganha numa rifa uma viagem com a mulher e a filha blogueira para Cartagena</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="minhamae" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia4.jpg" alt="Pôster de Minha Mãe é Uma Peça">
+            <div>
+                <h2>Minha Mãe é uma Peça: O Filme</h2>
+                <p><strong>Duração:</strong> 1h 24min</p>
+                <p><strong>Avaliação:</strong> 6.9/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Depois de outra briga com os filhos, Dona Hermínia decide tirar um tempo deles e se esconde na casa de sua tia, onde se lembra dos filhos em um momento em que ainda precisavam dela.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="esposa" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia5.jpg" alt="Pôster de Esposa de Mentirinha">
+            <div>
+                <h2>Esposa de Mentirinha</h2>
+                <p><strong>Duração:</strong> 1h 57min</p>
+                <p><strong>Avaliação:</strong> 6.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Numa viagem durante o fim de semana, um médico convençe a sua assistente de fingir ser a ex esposa dele para cubrir a mentira que diz para sua namorada.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="meugaroto" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia6.jpg" alt="Pôster de Este é o meu Garoto">
+            <div>
+                <h2>Este é o Meu Garoto</h2>
+                <p><strong>Duração:</strong> 1h 56min</p>
+                <p><strong>Avaliação:</strong> 5.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Na adolescência, Donny teve um filho, Todd, e o criou sozinho até o aniversário de 18 anos de Todd. Agora, Donny reaparece pouco antes do casamento de Todd, após anos separados, fazendo o mundo do futuro noivo desabar.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="paizao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/comedia7.jpg" alt="Pôster de O Paizão">
+            <div>
+                <h2>O Paizão</h2>
+                <p><strong>Duração:</strong> 1h 33min</p>
+                <p><strong>Avaliação:</strong> 6.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um graduado preguiçoso de faculdade de direito adota uma criança para impressionar sua namorada, mas tudo não vai de acordo com o plano e ele se torna o pai adotivo desastroso.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+/*INFATIL*/
+    <div id="carros" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infatntil1.jpg" alt="Pôster de Carros">
+            <div>
+                <h2>Carros</h2>
+                <p><strong>Duração:</strong> 1h 56min</p>
+                <p><strong>Avaliação:</strong> 7.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um carro de corridas chamado Relâmpago McQueen é desviado para Radiator Springs, onde ele encontra o verdadeiro significado da amizade e da família.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="toystory" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil2.jpg" alt="Pôster de Toy Story">
+            <div>
+                <h2>Toy Story</h2>
+                <p><strong>Duração:</strong> 1h 21min</p>
+                <p><strong>Avaliação:</strong> 8.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um boneco cowboy fica profundamente ciumento quando um novo boneco de ação de astronauta o suplanta como o brinquedo mais popular no quarto de um menino. Quando as circunstâncias os separam de seu dono, a dupla precisa deixar de lado suas diferenças para retornar a ele..</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="rato" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil3.jpg" alt="Pôster de Ratatouille">
+            <div>
+                <h2>Ratatouille</h2>
+                <p><strong>Duração:</strong> 1h 51min</p>
+                <p><strong>Avaliação:</strong> 8.1/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um rato que pode cozinhar forja uma aliança incomum com um jovem garoto em um famoso restaurante em Paris.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="hotel" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil4.jpg" alt="Pôster de Hotel Transilvânia 3">
+            <div>
+                <h2>Hotel Transilvânia 3: Férias Monstruosas</h2>
+                <p><strong>Duração:</strong> 1h 37min</p>
+                <p><strong>Avaliação:</strong> 6.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> O Conde Drácula e seus companheiros participam de um cruzeiro por monstros amantes do mar, sem saber que seu navio está sendo requisitado pela família Van Helsing, que odeia os monstros.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="aranhaverso" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil5.jpg" alt="Pôster de Homem-Aranha Aranhaverso">
+            <div>
+                <h2>Homem-Aranha: No Aranhaverso</h2>
+                <p><strong>Duração:</strong> 1h 57min</p>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Após ser mordido por uma aranha radioativa, Miles Morales se torna o Homem-Aranha de sua dimensão. Ele precisa se juntar a outras versões do herói de universos paralelos para salvar toda a realidade.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="viva" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil6.jpg" alt="Pôster de Viva: A Vida é uma festa">
+            <div>
+                <h2>Viva: A Vida é uma Festa</h2>
+                <p><strong>Duração:</strong> 1h 45min</p>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> O aspirante a músico Miguel, confrontado com a proibição ancestral da música pela sua família, entra na Terra dos Mortos para encontrar o seu tataravô, um cantor lendário.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="up" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/infantil7.jpg" alt="Pôster de UP: Altas Aventuras">
+            <div>
+                <h2>Up: Altas Aventuras</h2>
+                <p><strong>Duração:</strong> 1h 36min</p>
+                <p><strong>Avaliação:</strong> 8.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Carl Fredricksen, de 78 anos, viaja para a América do Sul com sua casa, inadvertidamente levando um menino com ele.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="invocacao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror1.jpg" alt="Pôster de Invocação do Mal">
+            <div>
+                <h2>Invocação do Mal</h2>
+                <p><strong>Duração:</strong> 1h 52min</p>
+                <p><strong>Avaliação:</strong> 7.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Os invesitgadores de actividades paranormais, Ed e Lorraine Warren, trabalham para ajudar a uma familia aterrorizada por uma escura presença na sua casa.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="medium" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror2.jpg" alt="Pôster de A Médium">
+            <div>
+                <h2>A Médium</h2>
+                <p><strong>Duração:</strong> 2h 10min</p>
+                <p><strong>Avaliação:</strong> 6.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma história assustadora sobre a herança de um xamã na região de Isan, na Tailândia. O que pode estar a possuir um membro da família pode não ser a Deusa que eles dizem ser.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="us" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror3.jpg" alt="Pôster de Nós">
+            <div>
+                <h2>Nós</h2>
+                <p><strong>Duração:</strong> 1h 56min</p>
+                <p><strong>Avaliação:</strong> 6.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> As serenas férias de praia de uma família transformam-se em caos quando os seus duplos aparecem e começam a aterrorizá-los.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="annabelle" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror4.jpg" alt="Pôster de Annabelle 2">
+            <div>
+                <h2>Annabelle 2: A Criação do Mal</h2>
+                <p><strong>Duração:</strong> 1h 49min</p>
+                <p><strong>Avaliação:</strong> 6.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Doze anos após a trágica morte de sua filhinha, um fabricante de bonecas e sua esposa recebem em sua casa uma freira e várias meninas de um orfanato fechado, onde elas se tornam alvo da criação possuída do fabricante de bonecas, Annabelle.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="it" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror5.jpg" alt="Pôster de It: A Coisa">
+            <div>
+                <h2>It: A Coisa</h2>
+                <p><strong>Duração:</strong> 2h 15min</p>
+                <p><strong>Avaliação:</strong> 7.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um grupo de garotos que sofre bullying se une para destruir um monstro que se disfarça de palhaço e ataca as crianças de sua pequena cidade.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="entidade" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror6.jpg" alt="Pôster de A Entidade">
+            <div>
+                <h2>A Entidade</h2>
+                <p><strong>Duração:</strong> 1h 50min</p>
+                <p><strong>Avaliação:</strong> 6.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um polêmico escritor de histórias reais encontra uma caixa de filmes caseiros em Super 8 em sua nova casa, revelando que o caso de assassinato que ele está pesquisando pode ser obra de um assassino em série desconhecido cujo legado remonta à década de 1960.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="rogai" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/terror7.jpg" alt="Pôster de Rogai por Nós">
+            <div>
+                <h2>Rogai por Nós</h2>
+                <p><strong>Duração:</strong> 1h 39min</p>
+                <p><strong>Avaliação:</strong> 5.1/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma menina com deficiência auditiva recebe a visita da Virgem Maria e, de repente, consegue ouvir, falar e curar os doentes. À medida que as pessoas se aglomeram para testemunhar seus milagres, eventos aterrorizantes se desenrolam. Seriam obra da Virgem Maria ou algo muito mais sinistro?</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="diario" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance1.jpg" alt="Pôster de Diário de uma Paixão">
+            <div>
+                <h2>Diário de uma Paixão</h2>
+                <p><strong>Duração:</strong> 2h 03min</p>
+                <p><strong>Avaliação:</strong> 7.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um idoso lê para uma mulher com demência a história de dois jovens amantes cujo romance é ameaçado pela diferença nas respectivas classes sociais.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="amor" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance2.jpg" alt="Pôster de Amor de Redenção">
+            <div>
+                <h2>Amor de Redenção</h2>
+                <p><strong>Duração:</strong> 2h 14min</p>
+                <p><strong>Avaliação:</strong> 6.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Vendida à prostituição quando criança, Angel não sabe mais nada senão traição. Poderá o seu coração alguma vez ser consertado? Baseado no romance de Francine Rivers.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="ideia" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance3.jpg" alt="Pôster de Uma Ideia de Você">
+            <div>
+                <h2>Uma Ideia de Você</h2>
+                <p><strong>Duração:</strong> 1h 55min</p>
+                <p><strong>Avaliação:</strong> 6.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Solène, uma mãe solteira de 40 anos, começa um romance inesperado com Hayes Campbell, de 24 anos, vocalista do August Moon, a boy band mais popular do planeta.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="suaculpa" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance4.jpg" alt="Pôster de Sua Culpa">
+            <div>
+                <h2>Sua Culpa</h2>
+                <p><strong>Duração:</strong> 1h 58min</p>
+                <p><strong>Avaliação:</strong> 5.2/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Apesar dos esforços dos pais para separá-los, o amor de Noah e Nick parece inquebrável. Porém, o trabalho e a faculdade abrem suas vidas para novos relacionamentos.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="passos" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance5.jpg" alt="Pôster de A Cinco Passos">
+            <div>
+                <h2>A Cinco Passos de Você</h2>
+                <p><strong>Duração:</strong> 1h 56min</p>
+                <p><strong>Avaliação:</strong> 7.2/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Dois adolescentes com fibrose cística se encontram em um hospital e se apaixonam, mesmo que sua doença os obrigue a evitar contato físico.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="antes" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance6.jpg" alt="Pôster de Como Eu Era Antes de Você">
+            <div>
+                <h2>Como Eu Era Antes de Você</h2>
+                <p><strong>Duração:</strong> 1h 50min</p>
+                <p><strong>Avaliação:</strong> 7.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Uma garota forma um vínculo improvável com um homem recentemente paralisado que ela está cuidando.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="aluguel" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/romance7.jpg" alt="Pôster de Amor de Aluguel">
+            <div>
+                <h2>Amor de Aluguel</h2>
+                <p><strong>Duração:</strong> 1h 40min</p>
+                <p><strong>Avaliação:</strong> 5.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um perdedor do ensino médio paga a uma líder de torcida para se fazer passar por sua namorada para que ele possa ser considerado legal.</p>
+            </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+</center>
+
+</body>
+</html>

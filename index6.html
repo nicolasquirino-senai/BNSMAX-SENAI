@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aba de Séries</title>
+    <link rel="icon" href="IMG/BNSmax.png" icon="image/x-icon">
+    <link rel="stylesheet" href="series.css">
+    <header>
+    <div class="logo">
+      <img src="IMG/BNSmaxSEMFUNDO.png" alt="Logo BNS Max">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="contas.html" class="active">Trocar Conta</a></li>
+                <li><a href="series.html">Séries</a></li>
+                <li><a href="catlogo-BNS.html">Filmes</a></li>
+      </ul>
+    </nav>
+
+    <!-- PERFIL SIMULADO (usuário logado) -->
+    <div class="perfil">
+      <img src="IMG/cont1.png" alt="Foto de Perfil">
+      <span>Perfil</span>
+    </div>
+  </header>
+
+    <script>
+        // Pega todos os links do menu
+        const menuLinks = document.querySelectorAll('nav a');
+
+        // Adiciona evento de clique em cada link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove a classe "active" de todos
+                menuLinks.forEach(item => item.classList.remove('active'));
+
+                // Adiciona a classe "active" no link clicado
+                link.classList.add('active');
+            });
+        });
+    </script>
+    <style>
+        /* Resetando estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #1e1e1e;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #111;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 32px;
+            font-weight: bold;
+            color: #AD49E1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #111;
+        }
+
+        /* Estilo para o item selecionado */
+        nav a.active {
+            background-color: #AD49E1;
+            color: white;
+        }
+
+        
+    </style>
+
+<body>
+
+<center>
+    <div class="filmes">
+        <table>
+        <div class="caixa">
+            <h1>Séries</h1>
+        </div>
+            <div class="titulos"><h1>Ação</h1></div>
+            <tr>
+                <th>Cobra Kai</th>
+                <th>Peaky Blinders</th>
+                <th>Lupin</th>
+                <th>The Last Of Us</th>
+                <th>S.W.A.T</th>
+                <th>Better Call Saul</th>
+                <th>Breaking Bad</th>
+
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#cobra"><img src="IMG/serieacao1.jpg" alt="Cobra Kai" class="zoom-img" width="250px" height="375px"></a></div></td>
+                <td><div class="imagens"><a href="#peaky"><img src="IMG/serieacao2.jfif" alt="Peaky Bliders" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#lupin"><img src="IMG/serieacao3.jpg" alt="Lupin" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#thelast"><img src="IMG/serieacao4.jfif" alt="The Last Of US" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#swat"><img src="IMG/serieacao5.jfif" alt="S.W.A.T" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#saul"><img src="IMG/serieacao6.jpg" alt="Better Call Saul" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#bad"><img src="IMG/serieacao7.jpg" alt="Breaking Bad" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+            </div>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Comédia</h1></div>
+            <tr>
+                <th>Modern Family</th>
+                <th>The Office</th>
+                <th>The Good Place</th>
+                <th>Brooklyn Nine-Nine</th>
+                <th>Friends/th>
+                <th>The Big Bang Theory</th>
+                <th>Shameless</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#modern"><img src="IMG/seriecomedia1.png" alt="Modern Family" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#office"><img src="IMG/seriecomedia2.jpg" alt="The Office" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#good"><img src="IMG/seriecomedia3.jpg" alt="Good Place" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#nine"><img src="IMG/seriecomedia4.jpg" alt="Brooklyn Nine-Nine" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#friends"><img src="IMG/seriecomedia5.png" alt="Friends" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#bigbang"><img src="IMG/seriecomedia6.jpg" alt="BigBang" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#shameless"><img src="IMG/seriecomedia7.jpg" alt="Shameless" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Animações</h1></div>
+            <tr>
+                <th>Incrível Mundo de Gumball</th>
+                <th>Kung Fu Panda</th>
+                <th>What IF</th>
+                <th>Hora de Aventura</th>
+                <th>Invencível</th>
+                <th>Gravity Falls</th>
+                <th>Rick And Morty</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#gumball"><img src="IMG/serianimacao1.jfif" alt="Incrível Mundo de Gumball" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#panda"><img src="IMG/serieanimacao2.jpg" alt="Kung Fu Panda" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#what"><img src="IMG/serieanimacao3.jpg" alt="What IF" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#hora"><img src="IMG/serieanimacao4.jpg" alt="Hora de Aventura" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#invencivel"><img src="IMG/serieanimacao5.jpg" alt="Invencível" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#gravity"><img src="IMG/serieanimacao6.jfif" alt="Gravity" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#rick"><img src="IMG/serieanimacao7.jpeg" alt="Rick And Morty" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Terror</h1></div>
+            <tr>
+                <th>Supernatural</th>
+                <th>Outsider</th>
+                <th>A Maldição Hill</th>
+                <th>A Maldição da Manção Bly</th>
+                <th>Stranger Things</th>
+                <th>American Horror Stories</th>
+                <th>Marianne</th>
+            </tr>
+
+            <tr>
+                <td><div class="imagens"><a href="#super"><img src="IMG/serieterror1.jpg" alt="SuperNatural" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#outsider"><img src="IMG/serieterror2.jpg" alt="The Outsider" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#maldicao"><img src="IMG/serieterror3.jpg" alt="Maldição Hill House" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#mancao"><img src="IMG/serieterror4.jpg" alt="" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#stranger"><img src="IMG/serieterror5.jfif" alt="IT a Coisa" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#american"><img src="IMG/serieterror6.jpg" alt="A Entidade" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#marianne"><img src="IMG/serieterror7.jpg" alt="Rogai por nós" class="zoom-img" width="250px" height="375px"></a></td>
+            <tr>
+        </table>
+        <hr>
+        <table>
+            <div class="titulos"><h1>Romance</h1></div>
+            <tr>
+                <th>Bridgerton</th>
+                <th>Anne With An "E"</th>
+                <th>Os BUcaneiros</th>
+                <th>Emily em Paris</th>
+                <th>Maxton Hall</th>
+                <th>Rainha Charlotte</th>
+                <th>Verão Que Mudou a Minha Vida</th>
+            </tr>
+        
+            <tr>
+                <td><div class="imagens"><a href="#brid"><img src="IMG/serieromance1.jpg" alt="Diário de uma paixão" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#anne"><img src="IMG/serieromance2.jfif" alt="Amor de Redenção" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#bucaneiros"><img src="IMG/serieromance3.jpg" alt="Uma Ideia de Você" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#emily"><img src="IMG/serieromance4.jfif" alt="Sua Culpa" class="zoom-img" width="250px" height="375px"></a></td>
+                <td><div class="imagens"><a href="#maxton"><img src="IMG/serieromance5.jfif" alt="A cinco passos de Você" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#rainha"><img src="IMG/serieromance6.jpg" alt="Como eu era antes de você" class="zoom-img" width="250px" height="375px"></td>
+                <td><div class="imagens"><a href="#verao"><img src="IMG/serieromance7.jpg" alt="Amor de Aluguel" class="zoom-img" width="250px" height="375px"></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="cobra" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao1.jpg" alt="Pôster de Gravity Falls">
+            <div>
+                <h2>Cobra Kai</h2>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Décadas após a disputa do All Valley Karate Tour em 1984, Johnny Lawrence buscarão redenção contra Daniel LaRusso.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Ace Degenerate</li>
+                        <li>Temporada 1, Episódio 2: Strike First</li>
+                        <li>Temporada 1, Episódio 3: Esqueleto</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+  </div>
+    <div id="peaky" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao2.jfif" alt="Pôster de Velozes e Furiosos">
+            <div>
+                <h2>Peaky Blinders: Sangue, Apostas e Navalhas</h2>
+                <p><strong>Avaliação:</strong> 8.7/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Depois de servir no Exército, Thomas Shelby e seus irmãos voltam para controlar a cidade, mas, conforme as ambições de Shelby se estendem, ele planeja construir seu próprio negócio e impedir qualquer um que atrapalhe.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: #1.1</li>
+                        <li>Temporada 1, Episódio 2: #1.2</li>
+                        <li>Temporada 1, Episódio 3: #1.3</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+    
+    <div id="lupin" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao3.jpg" alt="Pôster de Lupin">
+            <div>
+                <h2>Lupin</h2>
+                <p><strong>Avaliação:</strong> 7.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma adaptação contemporânea do clássico francês sobre Arsène Lupin: cavalheiro, ladrão e mestre dos disfarces. Com Omar Sy.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Chapter 1</li>
+                        <li>Temporada 1, Episódio 2: Chapter 2</li>
+                        <li>Temporada 1, Episódio 3: Chapter 3</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="thelast" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao4.jfif" alt="Pôster de The Last Of Us">
+            <div>
+                <h2>The Last of Us</h2>
+                <p><strong>Avaliação:</strong> 8.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Joel e Ellie, um par conectado pela dureza do mundo em que vivem, são forçados a suportar circunstâncias brutais e assassinos implacáveis ​​em uma jornada pela América pós-pandemia.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: When You're Lost in the Darkness</li>
+                        <li>Temporada 1, Episódio 2: Infected</li>
+                        <li>Temporada 1, Episódio 3: Long, Long Time</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="swat" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao5.jfif" alt="Pôster de S.W.A.T">
+            <div>
+                <h2>S.W.A.T.</h2>
+                <p><strong>Avaliação:</strong> 7.2/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Segue um Sargento da SWAT que está dividido entre a lealdade às suas ruas e o dever para com seus colegas quando lhe for dada a oportunidade de liderar uma unidade altamente qualificada para resolver crimes em Los Angeles.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Cuchillo</li>
+                        <li>Temporada 1, Episódio 3: Pamilya</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="saul" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao6.jpg" alt="Pôster de Better Call Saul">
+            <div>
+                <h2>Better Call Saul</h2>
+                <p><strong>Avaliação:</strong> 9.0/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Os julgamentos e atribulações do advogado criminal, Jimmy McGill, e o estabelecimento de seu escritório de advocacia em Albuquerque, Novo México.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Uno</li>
+                        <li>Temporada 1, Episódio 2: Mijo</li>
+                        <li>Temporada 1, Episódio 3: Nacho</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="bad" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieacao7.jpg" alt="Pôster de Breaking Bad">
+            <div>
+                <h2>Breaking Bad</h2>
+                <p><strong>Avaliação:</strong> 9.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Um professor de química diagnosticado com câncer de pulmão se transforma em fabricante e vendedor de metanfetamina, a fim de garantir o futuro da sua família.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Cat's in the Bag</li>
+                        <li>Temporada 1, Episódio 3: ...And the Bag's in the River</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="modern" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia1.png" alt="Pôster de Modern Family">
+            <div>
+                <h2>Família Moderna</h2>
+                <p><strong>Avaliação:</strong> 8.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Três famílias diferentes mas relacionadas enfrentam provas e tribulações de formas particularmente cômicas.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: The Bicycle Thief</li>
+                        <li>Temporada 1, Episódio 3: Come Fly with Me</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+    
+
+    <div id="office" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia2.jpg" alt="Pôster de The Office">
+            <div>
+                <h2>The Office - Vida de Escritório</h2>
+                <p><strong>Avaliação:</strong> 9.0/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um mockumentary sobre um grupo de trabalhadores de escritório, onde o dia de trabalho consiste em conflitos de ego e comportamento inadequado.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Diversity Day</li>
+                        <li>Temporada 1, Episódio 3: Health Care</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="good" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia3.jpg" alt="Pôster de The Good Place">
+            <div>
+                <h2>O Bom Lugar</h2>
+                <p><strong>Avaliação:</strong> 8.2/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Quatro pessoas lutam na vida após a morte para enteder o que verdaderamente é ser boa pessoa.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Everything Is Fine</li>
+                        <li>Temporada 1, Episódio 2: Flying</li>
+                        <li>Temporada 1, Episódio 3: Tahani Al-Jamil</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="nine" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia4.jpg" alt="Pôster de Brooklyn Nine-Nine">
+            <div>
+                <h2>Brooklyn Nine-Nine: Lei & Desordem</h2>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Jake Peralta, um detetive imaturo de Nova York, entra em conflito com seu novo comandante, o sério e severo Capitão Ray Holt.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: The Tager</li>
+                        <li>Temporada 1, Episódio 3: The Slump</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="friends" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia5.png" alt="Pôster de Friends">
+            <div>
+                <h2>Friends</h2>
+                <p><strong>Avaliação:</strong> 8.9/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Relata a vida pessoal e profissional de seis amigos na casa de seus 30 anos que vivem em Manhattan.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: The One Where Monica Gets a Roommate</li>
+                        <li>Temporada 1, Episódio 2: The One with the Soogram at the End</li>
+                        <li>Temporada 1, Episódio 3: The One with the Thumb</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="bigbang" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia6.jpg" alt="Pôster de BigBang">
+            <div>
+                <h2>Big Bang: A Teoria</h2>
+                <p><strong>Avaliação:</strong> 8.1/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Uma mulher se muda para um apartamento do outro lado do corredor perto de dois físicos brilhantes, mas socialmente desajeitados, e lhes mostra quão pouco sabem sobre a vida fora do laboratório.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: The Big Bran Hypothesis</li>
+                        <li>Temporada 1, Episódio 3: The Fuzzy Boots Corollary</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="shameless" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/seriecomedia7.jpg" alt="Pôster de Shameless">
+            <div>
+                <h2>Shameless</h2>
+                <p><strong>Avaliação:</strong> 8.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma conflituosa e leal familia de Chicago não dá desculpas.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Frank the Plank</li>
+                        <li>Temporada 1, Episódio 3: Aunt Ginger</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="gumball" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serianimacao1.jfif" alt="Pôster de O Incrível Mundo de Gumball">
+            <div>
+                <h2>O Incrível Mundo de Gumball</h2>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> A vida de um menino de doces anos que resulta ser um gato azul, que vive com sua família e outras criaturas estranhas.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: The DVD</li>
+                        <li>Temporada 1, Episódio 2: The Resposible</li>
+                        <li>Temporada 1, Episódio 3: The Third</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="panda" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao2.jpg" alt="Pôster de Kung Fu Panda">
+            <div>
+                <h2>Kung Fu Panda: Lendas do Dragão Guerreiro</h2>
+                <p><strong>Avaliação:</strong> 7.0/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Kung Fu Panda: Lendas do Dragão Guerreiro conta as aventuras do panda Po enquanto ele protege, ensina, aprende, tropeça e fala demais como o novo herói do Vale da Paz em sua residência permanente com os Cinco Furiosos.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Scorpion's Sting</li>
+                        <li>Temporada 1, Episódio 2: The Princess and the Po</li>
+                        <li>Temporada 1, Episódio 3: Sticky Situation</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="what" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao3.jpg" alt="Pôster de WHAT IF">
+            <div>
+                <h2>What If...?</h2>
+                <p><strong>Avaliação:</strong> 7.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Explorando momentos cruciais do Universo do Cinema da Marvel, levando o público ao território desconhecido.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: What if... Captain Carter Were the First Avenger?</li>
+                        <li>Temporada 1, Episódio 2: What if... T'Challa Became a Star-Lord?</li>
+                        <li>Temporada 1, Episódio 3: What if... The World Lost Its Mightlest Heroes?</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="hora" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao4.jpg" alt="Pôster de Hora de Aventura">
+            <div>
+                <h2>Hora de Aventura</h2>
+                <p><strong>Avaliação:</strong> 8.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um garotinho chamado Finn e seu melhor amigo Jake; um cão mágico com a capacidade de se esticar em qualquer forma que você quiser, ir em aventuras loucas juntos e conhecer muitos amigos e inimigos ao longo do caminho.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 0: Adventure Time</li>
+                        <li>Temporada 1, Episódio 1: Slumber Party Panic</li>
+                        <li>Temporada 1, Episódio 2: Trouble in Lumpy Space</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="invencivel" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao5.jpg" alt="Pôster de Invencível">
+            <div>
+                <h2>Invencível</h2>
+                <p><strong>Avaliação:</strong> 8.7/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Mark Grayson, de 17 anos, é como qualquer outro garoto da sua idade, só que o seu pai é o super-herói mais poderoso do planeta.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: It's About Time</li>
+                        <li>Temporada 1, Episódio 2: Here Goes Nothing</li>
+                        <li>Temporada 1, Episódio 3: Who You Calling Ugly?</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="gravity" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao6.jfif" alt="Pôster de Gravity Falls">
+            <div>
+                <h2>Gravity Falls: Um Verão de Mistérios</h2>
+                <p><strong>Avaliação:</strong> 8.9/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Dois irmãos gemeios, o Dipper e a Mabel Pines passam suas férias no centro turístico de seu tio na cidade de Gravity Falls.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Tourist Trapped</li>
+                        <li>Temporada 1, Episódio 2: The Legend of the Gobblewonker</li>
+                        <li>Temporada 1, Episódio 3: Headhunters</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+
+    <div id="rick" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieanimacao7.jpeg" alt="Pôster de Rick And Morty">
+            <div>
+                <h2>Rick e Morty</h2>
+                <p><strong>Avaliação:</strong> 9.0/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma série animada que segue as façanhas de um super cientista e seu neto não tão brilhante.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Lawnmower Dog</li>
+                        <li>Temporada 1, Episódio 3: Anatomy Park</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="super" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror1.jpg" alt="Pôster de SuperNatural">
+            <div>
+                <h2>Sobrenatural</h2>
+                <p><strong>Avaliação:</strong> 8.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Dois irmãos seguem os passos do pai como caçadores, lutando contra aterradores seres sobrenaturais que vagam pela terra.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Pilot</li>
+                        <li>Temporada 1, Episódio 2: Wendigo</li>
+                        <li>Temporada 1, Episódio 3: Dead in the Water</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="outsider" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror2.jpg" alt="Pôster de The Outsider">
+            <div>
+                <h2>The Outsider</h2>
+                <p><strong>Avaliação:</strong> 7.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Os investigadores ficam confusos com um crime indescritível que foi cometido.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Fish in a Barrel</li>
+                        <li>Temporada 1, Episódio 2: Roanoke</li>
+                        <li>Temporada 1, Episódio 3: Dark Uncle</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="maldicao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror3.jpg" alt="Pôster de Maldição Hill House">
+            <div>
+                <h2>A Maldição da Residência Hill</h2>
+                <p><strong>Avaliação:</strong> 8.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma família fraturada confronta memórias assombradas de sua antiga casa e os eventos aterrorizantes que os expulsaram dela.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Steven Sees a Ghost</li>
+                        <li>Temporada 1, Episódio 2: Open Casket</li>
+                        <li>Temporada 1, Episódio 3: Touch</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="mancao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror4.jpg" alt="Pôster de Manção Bly">
+            <div>
+                <h2>A Maldição da Mansão Bly</h2>
+                <p><strong>Avaliação:</strong> 7.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Após a trágica morte de uma babá, Henry Wingrave contrata uma jovem americana para cuidar de seus sobrinhos órfãos que moram na Mansão Bly com o motorista Owen, a jardineira Jamie e a governanta Sra. Grose.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: The Great Good Place</li>
+                        <li>Temporada 1, Episódio 2: The Pupil</li>
+                        <li>Temporada 1, Episódio 3: The Two Faces, Part One</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="stranger" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror5.jfif" alt="Pôster de Stranger Things">
+            <div>
+                <h2>Stranger Things</h2>
+                <p><strong>Avaliação:</strong> 86/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Depois do desaparecimento de um menino, sua mãe, um chefe de polícia e seus amigos precisam enfrentar forças aterrorizantes para trazê-lo de volta.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Chapter One: The Vanishing of Will Byers</li>
+                        <li>Temporada 1, Episódio 2: Chapter Two: The Weirdo on Maple Street</li>
+                        <li>Temporada 1, Episódio 3: Chapter Three: Hooly, Jolly</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="american" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror6.jpg" alt="Pôster de American Horror Stories">
+            <div>
+                <h2>American Horror Stories</h2>
+                <p><strong>Avaliação:</strong> 6.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma série antológica de episódios isolados que mergulham nos mitos, lendas e tradições do horror.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Rubber (Wo)man: Party One</li>
+                        <li>Temporada 1, Episódio 2: Rubber (Wo)man: Part Two</li>
+                        <li>Temporada 1, Episódio 3: Drive In</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="marianne" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieterror7.jpg" alt="Pôster de Marianne">
+            <div>
+                <h2>Marianne</h2>
+                <p><strong>Avaliação:</strong> 7.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Quando uma famosa escritora de horror retorna à sua cidade natal, ela descobre que o espírito maligno que atormenta seus sonhos também está lá na vida real.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Tu les rêves</li>
+                        <li>Temporada 1, Episódio 2: C'est coutume!</li>
+                        <li>Temporada 1, Episódio 3: Je ne suis pas un cadeau</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="brid" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance1.jpg" alt="Pôster de Bridgerton">
+            <div>
+                <h2>Bridgerton</h2>
+                <p><strong>Avaliação:</strong> 7.4/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Riqueza, luxúria e traição no cenário da era da Regência na Inglaterra, vista através dos olhos da poderosa família Bridgerton.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Diamond of Te First Water</li>
+                        <li>Temporada 1, Episódio 2: Shock and Delight</li>
+                        <li>Temporada 1, Episódio 3: Art of The Swoon</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="anne" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance2.jfif" alt="Pôster de Anne">
+            <div>
+                <h2>Anne com um E</h2>
+                <p><strong>Avaliação:</strong> 8.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> As aventuras de uma jovem órfã que viveu no final do século 19. Siga Anne enquanto ela aprende a navegar sua nova vida na Ilha do Príncipe Eduardo, nesta nova versão dos romances clássicos de L.M. Montgomery.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Your Will Shall Decide Your Destiny</li>
+                        <li>Temporada 1, Episódio 2: I Am No Bird, and No Net Ensares Me</li>
+                        <li>Temporada 1, Episódio 3: But What Is So Headstrong as Youth?</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="bucaneiros" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance3.jpg" alt="Pôster de Bucaneiros">
+            <div>
+                <h2>Os Bucaneiros</h2>
+                <p><strong>Avaliação:</strong> 6.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Na década de 1870, um grupo de garotas americanas ricas estão tentando encontrar um marido inglês chique durante a temporada de estreantes em Londres.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: American Poison</li>
+                        <li>Temporada 1, Episódio 2: Women or Wives</li>
+                        <li>Temporada 1, Episódio 3: The Perfect Duchess</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="emily" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance4.jfif" alt="Pôster de Emily Em Paris">
+            <div>
+                <h2>Emily em Paris</h2>
+                <p><strong>Avaliação:</strong> 6.8/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Uma jovem executiva de Chicago consegue o emprego dos sonhos em Paris. Lá, além de trabalhar com estratégia de mídias sociais para o segmento de luxo, ela viverá os altos e baixos das amizades e romances.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Emily In Paris</li>
+                        <li>Temporada 1, Episódio 2: Masculin Féminin</li>
+                        <li>Temporada 1, Episódio 3: Sexy or Sexist</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="maxton" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance5.jfif" alt="Pôster de Maxton Hall">
+            <div>
+                <h2>Maxton Hall - O Mundo Entre Nós</h2>
+                <p><strong>Avaliação:</strong> 7.5/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> A perspicaz estudante bolsista Ruby testemunha, sem querer, um segredo em Maxton Hall. O arrogante herdeiro milionário James está determinado a silenciá-la, mas seu confronto acende uma faísca inesperada entre eles.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Unterm Radar</li>
+                        <li>Temporada 1, Episódio 2: Adel verpflichetet</li>
+                        <li>Temporada 1, Episódio 3: BloBgestellt</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="rainha" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance6.jpg" alt="Pôster de Rainha Charlotte">
+            <div>
+                <h2>Rainha Charlotte: Uma História Bridgerton</h2>
+                <p><strong>Avaliação:</strong> 7.6/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong>Neste spin-off, o casamento da rainha Charlotte com o rei George é muito mais que uma história de amor: é uma transformação na alta sociedade do universo de Bridgerton.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Queen to Be</li>
+                        <li>Temporada 1, Episódio 2: Honeymoon Bliss</li>
+                        <li>Temporada 1, Episódio 3: Even Days</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+
+    <div id="verao" class="detalhes-container">
+        <a href="#" class="fechar">X</a>
+        <div class="conteudo-detalhes">
+            <img src="IMG/serieromance7.jpg" alt="Pôster de Verão Que Mudou Minha Vida">
+            <div>
+                <h2>O Verão Que Mudou Minha Vida</h2>
+                <p><strong>Avaliação:</strong> 7.3/10 (IMDb)</p>
+                <p><strong>Sinopse:</strong> Um triângulo amoroso entre uma garota e dois irmãos. Uma história sobre o primeiro amor, o primeiro desgosto e a magia daquele verão perfeito.</p>
+            </div>
+                <div class="episodios"><br>
+                    <h3>Episódios</h3>
+                    <ul>
+                        <li>Temporada 1, Episódio 1: Summer House</li>
+                        <li>Temporada 1, Episódio 2: Summer Dress</li>
+                        <li>Temporada 1, Episódio 3: Summer Nights</li>
+                    </ul>
+                </div>
+            <button type="button" class="botao-assista">Assista Agora</button>
+        </div>
+    </div>
+</center>
+
+</body>
+</html>

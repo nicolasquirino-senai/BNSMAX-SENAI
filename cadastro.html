@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style LOGIN CADASTRO.css">
+</head>
+<body>
+    <div class="login">
+        <div class="caixa">
+            <h1>Cadastro</h1>
+            <p>Preencha as informações abaixo para fazer seu cadastro:</p>
+            <form action="catalogo.html" method="get">
+                <div class="login-grupo">
+                    <select name="planos" id="Iplanos">
+                        <option value="plano1">Plano Mensal</option>
+                        <option value="plano2">Plano Anual</option>
+                    </select>
+                </div>
+                <div class="colunas">
+                    <div class="login-grupo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="login-grupo">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" maxlength="11" name="cpf" id="cpf" required>
+                    </div>
+                </div>
+                <div class="login-grupo">
+                    <label for="Iemail">Email:</label>
+                    <input type="email" name="email" id="Iemail" required>
+                </div>
+                <div class="colunas">
+                    <div class="login-grupo">
+                        <label for="Isenha">Senha:</label>
+                        <input type="password" name="senha" id="Isenha" required>
+                    </div>
+                    <div class="login-grupo">
+                        <label for="confirm-senha">Confirmar Senha:</label>
+                        <input type="password" name="confirm-senha" id="confirm-senha" required>
+                    </div>
+                </div>
+                <div>
+                    <p>Você já tem cadastro? <a href="login.html">Clique Aqui</a></p>
+                </div>
+                <a href="login.html"><button type="submit" class="login-botao">Cadastrar</button></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{
+    background-image: linear-gradient(to right, black, rgb(115, 0, 115));
+}
+
+.filmes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+        
+.titulos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #AD49E1;
+}
+
+.imagens{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.zoom-img {
+    transition: transform 0.3s ease;
+    transition: border 0.3s ease; /* Transição suave */
+}
+
+.zoom-img:hover {
+    transform: scale(1.05);
+}
+
+img:hover {
+  border: 5px solid #AD49E1; /* Borda de 5px com cor azul */
+}
+
+.caixa{
+    width:100%;
+    background-color: #AD49E1;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.caixa h1{
+    color: floralwhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display:  grid; /*Ativa o grid layout*/
+
+    grid-template-columns: repeat(7, 1fr); /*Criar 3 colunas com larguras iguas(1fr= 1 fração do espaço disponível*/
+
+    gap: 10px; /*Espaço entre os itens do GRID*/
+    padding: 10px;
+
+}

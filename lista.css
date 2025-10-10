@@ -1,15 +1,113 @@
 body{
+    font-family: sans-serif;    
     background-image: linear-gradient(to right, black, rgb(115, 0, 115));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: #111;
+    color: white;
+}
+/* PERFIL NO CABEÇALHO */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #AD49E1;
+}
+
+.perfil span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.perfil-info {
+    background-color: #222;
+    padding: 30px;
+    margin-top: 40px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(173, 73, 225, 0.4);
+}
+
+.perfil-info h2 {
+    color: #AD49E1;
+    margin-bottom: 15px;
+}
+
+.perfil-info p {
+    margin: 5px 0;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.logo span{
+    font-size: 32px;
+    font-weight: bold;
+    color: #AD49E1;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color: white;
+    color: #111;
+}
+
+ /* Estilo para o item selecionado */
+nav a.active{
+    background-color: #AD49E1;
+    color: white;
 }
 
 .filmes{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
         
 .titulos{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: #AD49E1;
+    color: #AD49E1;
 }
 
 .imagens{
@@ -17,16 +115,16 @@ body{
     padding: 5px;
 }
 
-.zoom-img {
+.zoom-img{
     transition: transform 0.3s ease;
     transition: border 0.3s ease; /* Transição suave */
 }
 
-.zoom-img:hover {
+.zoom-img:hover{
     transform: scale(1.05);
 }
 
-img:hover {
+img:hover{
   border: 5px solid #AD49E1; /* Borda de 5px com cor azul */
 }
 

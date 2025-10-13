@@ -1,0 +1,241 @@
+body{
+    background-image: linear-gradient(to right, black, rgb(115, 0, 115));
+}
+
+.filmes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+        
+.titulos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #AD49E1;
+}
+
+.imagens{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.zoom-img {
+    transition: transform 0.3s ease;
+    transition: border 0.3s ease; /* Transição suave */
+}
+
+.zoom-img:hover {
+    transform: scale(1.05);
+}
+
+img:hover {
+  border: 5px solid #AD49E1; /* Borda de 5px com cor azul */
+}
+
+.caixa{
+    width:100%;
+    background-color: #AD49E1;
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+/*JANELA SINOPSE*/
+/* Esconde todas as seções de detalhes por padrão */
+.detalhes-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Quando a seção de detalhes é o "alvo", ela é mostrada */
+.detalhes-container:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    max-width: 800px;
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .conteudo-detalhes {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+}
+
+.conteudo-detalhes img {
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-detalhes h2 {
+    margin-top: 0;
+}
+
+.episodios {
+    margin-top: 20px;
+}
+
+.episodios ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.episodios li {
+    background-color: #333;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão de fechar */
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.botao-assista {
+        /* Faz o elemento se comportar como um botão clicável */
+     display: inline-block; 
+            
+    /* Dimensões e Espaçamento */
+    padding: 12px 25px;
+            
+    /* Estilo Visual */
+      background-color: #c300ff; /* Cor principal: Azul */
+        color: #ffffff; /* Cor do texto: Branco */
+        text-decoration: none; /* Remove o sublinhado, se for um link */
+      border: none; /* Remove a borda padrão do botão */
+      border-radius: 8px; /* Cantos levemente arredondados */
+      cursor: pointer; /* Muda o cursor para indicar que é clicável */
+     font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+        }
+
+        /* Efeito ao passar o mouse (Hover) */
+        .botao-assista:hover {
+            background-color: #8f00b3; /* Cor mais escura ao passar o mouse */
+            transform: translateY(-2px); /* Efeito sutil de elevação */
+        }
+
+        /* Efeito ao clicar (Active) */
+        .meu-botao:active {
+            background-color: #3e0085;
+            transform: translateY(0);
+        }
+
+        header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #111;
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 32px;
+      font-weight: bold;
+      color: #AD49E1;
+    }
+
+    /* MENU */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #AD49E1;
+      color: white;
+    }
+
+    /* PERFIL NO CABEÇALHO */
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .perfil img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 2px solid #AD49E1;
+    }
+
+    .perfil span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .perfil-info {
+      background-color: #222;
+      padding: 30px;
+      margin-top: 40px;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(173, 73, 225, 0.4);
+    }
+
+    .perfil-info h2 {
+      color: #AD49E1;
+      margin-bottom: 15px;
+    }
+
+    .perfil-info p {
+      margin: 5px 0;
+    }

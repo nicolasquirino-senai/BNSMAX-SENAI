@@ -71,13 +71,6 @@ img:hover {
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-    .conteudo-detalhes {
-        flex-direction: row;
-        gap: 30px;
-    }
-    
-}
 
 .conteudo-detalhes img {
     width: 250px;
@@ -238,4 +231,5 @@ img:hover {
 
     .perfil-info p {
       margin: 5px 0;
+
     }
